@@ -10,6 +10,7 @@ services:
     volumes:
       - /docker/flood/config:/config
       - /mnt/storage_sata/portainer/flood:/data
+      - /mnt/storage_sata/:/storage_sata
     networks:
       - npm_net
 networks:
