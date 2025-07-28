@@ -10,7 +10,12 @@ services:
     volumes:
       - /docker/flood/config:/config
       - /mnt/storage_sata/portainer/flood:/data
-      - /mnt/storage_sata/:/storage_sata
+      - /mnt/storage_sata/media/z_to_sort:/z_to_sort
+      - /mnt/storage_sata/media/z_incomplete:/z_incomplete
+      - /mnt/storage_sata/media/movies:/movies
+      - /mnt/storage_sata/media/tv_v1:/tv_v1
+      - /mnt/storage_sata/media/music:/music
+      - /mnt/storage_sata/downloads:/downloads
     networks:
       - npm_net
 networks:
