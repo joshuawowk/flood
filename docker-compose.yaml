@@ -1,0 +1,17 @@
+services:
+  flood:
+    hostname: flood
+    image: jesec/flood
+    user: 1000:1001
+    restart: unless-stopped
+    command: --port 3001 --allowedpath /data
+    environment:
+      HOME: /config
+    volumes:
+      - /docker/flood/config:/config
+      - /mnt/storage_sata/portainer/flood:/data
+    networks:
+      - npm_net
+networks:
+  npm_net:
+    external: true
