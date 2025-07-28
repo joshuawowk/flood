@@ -4,6 +4,7 @@ services:
     image: jesec/flood
     restart: unless-stopped
     command: --port 3001 --allowedpath /data
+    user: 1000:1000
     environment:
       HOME: /config
     volumes:
